@@ -1,14 +1,14 @@
-# README
+# IDORails
 
-This README will you make able to rebuild this application by taking this tutorial.
+This README will you make able to rebuild this app, without source code, by following this tutorial.
 
-One IDOR has been left on `articles#show`.
+IDORs has been left on `articles#show` and `articles#destroy`.
 
 ## Create a basic application
 
 ```
-rails new idorails
-cd idorails
+rails new IDORails
+cd IDORails
 
 bin/rails generate controller Articles index --skip-routes
 bin/rails generate model Article title:string body:text
