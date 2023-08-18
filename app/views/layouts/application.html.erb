@@ -11,6 +11,20 @@
   </head>
 
   <body>
+    <p style="color: green"><%= notice %></p>
+    <p style="color: red"><%= alert %></p>
+    <hr />
+    <div>
+      <%= link_to "Home", root_path, :class => 'navbar-link'  %> |
+      <% if user_signed_in? %>
+        Logged in as <strong><%= current_user.email %></strong>.
+        <%= link_to "Logout", destroy_user_session_path, :class => 'navbar-link'  %>
+      <% else %>
+        <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+        <%= link_to "Sign in", new_user_session_path, :class => 'navbar-link'  %>
+      <% end %>
+    </div>
+    <hr />
     <%= yield %>
   </body>
 </html>
