@@ -1,0 +1,8 @@
+h1 Articles
+
+ul
+  - @articles.each do |article|
+    li
+      = link_to article.title
+
+= link_to 'New Article', new_article_path
