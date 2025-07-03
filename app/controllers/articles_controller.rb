@@ -8,6 +8,7 @@ class ArticlesController < ApplicationController
   def show
     @article = Article.find(params[:id])
     authorize @article
+    @article.body = Rails::Html::FullSanitizer.new.sanitize(@article.body)
   end
 
   def new
